@@ -1,33 +1,33 @@
 {
   "date": "2026-10-22",
   "pages": 4,
-  "pdf_sha256": "4098c557474b108bb0872bbcc4a8120dfdc3833b44e1d4ea308d6ba2e3243d10",
+  "pdf_sha256": "4057f548ebe3beeaa68b55f0f6d811dc95e6675c18fd321764e14a6ef5bc6d0f",
   "layout": [
     {
       "stem": "proposal",
       "metrics": [
         {
           "page": 1,
-          "gapToFooter": 23,
-          "mainHeight": 909,
+          "gapToFooter": 29,
+          "mainHeight": 943,
           "horizontalOverflow": []
         },
         {
           "page": 2,
-          "gapToFooter": 30,
-          "mainHeight": 902,
+          "gapToFooter": 27,
+          "mainHeight": 944,
           "horizontalOverflow": []
         },
         {
           "page": 3,
-          "gapToFooter": 80,
-          "mainHeight": 853,
+          "gapToFooter": 21,
+          "mainHeight": 950,
           "horizontalOverflow": []
         },
         {
           "page": 4,
           "gapToFooter": 36,
-          "mainHeight": 897,
+          "mainHeight": 935,
           "horizontalOverflow": []
         }
       ]
@@ -40,5 +40,12 @@
     1024,
     1440
   ],
-  "protected_application_materials": "Stored outside this repository; original contents unchanged"
+  "protected_application_materials": "Stored outside this repository; original contents unchanged",
+  "print_typography_pt": {
+    "title": 16,
+    "body": 10.5,
+    "figure_table": 9,
+    "caption": 8
+  },
+  "browser_comments_20261022": "global print layout revision, two photographs, centered tables, separate workflows, coordinated pathways, heading wings"
 }
