@@ -1,7 +1,7 @@
 {
   "date": "2026-10-22",
   "pages": 4,
-  "pdf_sha256": "ed69d20e5d888d82c1bfac854d394a35c3461b732aca056a1d30742674fca66b",
+  "pdf_sha256": "7a247ff33533d3f871155c57959e66adf65a6f36c1ae96933239828ec85c4d25",
   "layout": [
     {
       "stem": "proposal",
@@ -26,8 +26,8 @@
         },
         {
           "page": 4,
-          "gapToFooter": 13,
-          "mainHeight": 958,
+          "gapToFooter": 16,
+          "mainHeight": 955,
           "horizontalOverflow": []
         }
       ]
@@ -52,5 +52,6 @@
   "photo_checks": "7 user-supplied photographs; CSS crops; 15 unique ledger images; existing unedited demo records migrate; personal and edited records preserved",
   "header_checks": "Fine divider on all pages; competition name on pages 2-4 only",
   "cover_photographs": "Three 180px square photographs centered independently in equal columns; no caption; 21px gap to footer",
-  "advisors_update": "Matched current application: supervisor Xu Xuehua (lecturer); four consultants; application original hash unchanged"
+  "advisors_update": "Matched current application: supervisor Xu Xuehua (lecturer); four consultants; application original hash unchanged",
+  "submission_review": "Application saved as 6 participants; supervisor and consultant institutions matched; 4 A4 pages and footers checked; protected originals unchanged"
 }

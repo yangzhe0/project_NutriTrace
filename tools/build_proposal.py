@@ -61,7 +61,7 @@ short_refs=['国家卫生健康委. “健康饮食、合理膳食”核心信�
 refs=''.join(f'<li><span>[{i}]</span><a href="{SOURCES[i][1]}">{t}</a></li>' for i,t in enumerate(short_refs,1))
 p4=f'''
 {title('04','团队协同、验证与持续推进')}{sub('4.1','工程 × 管理 × 设计：六人协作推进')}
-<p>团队 <b>2的10次幂</b> · 数理与统计学院 / 设计学院 / 管理学院 · 指导教师 <b>许雪花讲师</b><span class="consultant-line">顾问：张会彦、沈世勇、孙鼎、刘婧</span></p>
+<p>团队 <b>2的10次幂</b> · 数理与统计学院 / 设计学院 / 管理学院 · 指导教师 <b>许雪花讲师</b><span class="consultant-line"><span>顾问：</span><span class="consultant-names"><span>张会彦（上海工程技术大学）</span><span>沈世勇（上海工程技术大学）</span><span>孙鼎（上海中医药大学龙华医院）</span><span>刘婧（上海健康医学院）</span></span></span></p>
 <div class="team-grid">
 <div><h3>杨哲 <small>负责人 · 开发 / 设计</small></h3><p>系统与 Skill 开发、台账结构、交互联调及统筹。</p></div>
 <div><h3>方子昊 <small>调研 / 分析</small></h3><p>食物条目整理、份量与数值核验、测试分析。</p></div>

@@ -89,6 +89,6 @@ project_ShiJi/
 
 指导教师：**许雪花讲师**。
 
-顾问：张会彦、沈世勇、孙鼎、刘婧。
+顾问：张会彦（上海工程技术大学）、沈世勇（上海工程技术大学）、孙鼎（上海中医药大学龙华医院）、刘婧（上海健康医学院）。
 
 第三方资料说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；部署方式见 [docs/deployment.md](docs/deployment.md)。本仓库暂未指定统一开源许可证。
