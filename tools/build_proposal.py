@@ -23,7 +23,7 @@ p1=f'''
 <table class="scene-table"><thead><tr><th>使用场景</th><th>用户真正想知道</th><th>食迹提供的帮助</th></tr></thead><tbody><tr><td><b>连续外食，搭配重复</b><small>食堂 / 外卖 / 便利店</small></td><td>最近哪些营养来源比较少？</td><td>整理近期餐次与份量，展示摄入来源、记录覆盖情况及值得优先调整的食物类别。</td></tr><tr><td><b>预算有限，要买得具体</b><small>下一餐加购或替换</small></td><td>今天加什么、多少、多少钱？</td><td>按营养目标、预算与忌口比较候选食物，列出份量、预计贡献和替换选项。</td></tr><tr><td><b>饮食改善，仍然不适</b><small>乏力持续或影响日常</small></td><td>还需补充什么、怎样就医？</td><td>追问持续时间与伴随表现，生成就医沟通摘要，提示进一步专业评估。</td></tr></tbody></table>
 {sub('1.3','公共健康与研究依据')}
 <div class="evidence-pair"><div><b>把膳食原则变成日常选择</b><p><strong class="key-source">国家卫生健康委倡导</strong>增加蔬果、全谷物与水产品摄入，建议每天摄入新鲜水果 200—350 克。{cite(1)} 项目将这类原则转为一次可执行的加购或替换。</p></div><div><b>连续反馈具有研究基础</b><p><strong class="key-source">Food4Me 随机试验</strong>显示，基于个人信息的营养反馈有助于改善部分饮食行为。{cite(2)} 这支持服务思路，项目的实际效果仍需本土场景验证。</p></div></div>
-<figure class="food-panel"><img src="{asset("assets/editorial/daily-egg-noodles.jpg")}" class="daily-noodle" alt="煎蛋午餐肉面"><img src="{asset("assets/editorial/daily-ribs-rice.jpg")}" class="daily-rice" alt="排骨杂蔬饭"><figcaption>日常餐食素材：煎蛋午餐肉面 / 排骨杂蔬饭；份量与日期另按演示情境编排。</figcaption></figure>
+<figure class="food-panel"><img src="{asset("assets/editorial/daily-egg-noodles.jpg")}" class="daily-noodle" alt="煎蛋午餐肉面"><img src="{asset("assets/editorial/daily-ribs-rice.jpg")}" class="daily-rice" alt="排骨杂蔬饭"><figcaption>日常餐食示例 · 煎蛋午餐肉面 / 排骨杂蔬饭</figcaption></figure>
 '''
 skills=[
 ('餐食解码','meal_profile_skill','照片 / 餐次 / 实际份量','识别候选食材，询问关键份量；将补记和修正写回同一餐次，保留修改历史。','可修正的餐食记录'),
