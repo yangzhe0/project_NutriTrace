@@ -87,6 +87,8 @@ project_ShiJi/
 | 江媛 | 设计 / 展示 |
 | 张新成 | 设计 / 展示 |
 
-指导教师：**张会彦副教授**。
+指导教师：**许雪花讲师**。
+
+顾问：张会彦、沈世勇、孙鼎、刘婧。
 
 第三方资料说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；部署方式见 [docs/deployment.md](docs/deployment.md)。本仓库暂未指定统一开源许可证。

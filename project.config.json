@@ -30,6 +30,25 @@
       "role": "管理/调研"
     }
   ],
-  "advisor": "张会彦",
-  "english_name": "NutriTrace"
+  "advisor": "许雪花",
+  "english_name": "NutriTrace",
+  "advisor_title": "讲师",
+  "consultants": [
+    {
+      "name": "张会彦",
+      "institution": "上海工程技术大学"
+    },
+    {
+      "name": "沈世勇",
+      "institution": "上海工程技术大学"
+    },
+    {
+      "name": "孙鼎",
+      "institution": "上海中医药大学龙华医院"
+    },
+    {
+      "name": "刘婧",
+      "institution": "上海健康医学院"
+    }
+  ]
 }

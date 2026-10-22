@@ -14,7 +14,7 @@ def school():return f'<div class="school"><img class="symbol" src="{asset("asset
 qr=asset('assets/demo-access-qr.png')
 
 p1=f'''
-<div class="cover"><div><div class="eyebrow">2026 旋创赛 · 智能数字大健康 · 创意计划书</div><h1>食迹 <em>NutriTrace</em><span> — 基于个人饮食台账的营养管理智能体</span></h1><p class="cover-meta"><span>团队 <b>2的10次幂</b></span><span>负责人 <b>杨哲</b></span><span>指导教师 <b>张会彦</b></span></p></div><a class="demo-entry" href="https://sa.zheoi.com/"><img src="{qr}" alt="食迹在线体验二维码"><b>sa.zheoi.com</b><span>扫一扫或点击网站体验</span></a></div>
+<div class="cover"><div><div class="eyebrow">2026 旋创赛 · 智能数字大健康 · 创意计划书</div><h1>食迹 <em>NutriTrace</em><span> — 基于个人饮食台账的营养管理智能体</span></h1><p class="cover-meta"><span>团队 <b>2的10次幂</b></span><span>负责人 <b>杨哲</b></span><span>指导教师 <b>许雪花</b></span></p></div><a class="demo-entry" href="https://sa.zheoi.com/"><img src="{qr}" alt="食迹在线体验二维码"><b>sa.zheoi.com</b><span>扫一扫或点击网站体验</span></a></div>
 
 {title('01','项目背景与校园需求')}{sub('1.1','从“拍过一餐”到“知道今天怎么吃”')}
 <p>食堂、外卖与便利店是学生的日常就餐场景，但吃了多少、哪些食物很少出现、近期精力与睡眠怎样，往往散落在照片和聊天里。用户需要把连续记录用于具体选择：<strong>今天在预算内加哪一种食物、吃多少、为什么选它？</strong></p>
@@ -61,7 +61,7 @@ short_refs=['国家卫生健康委. “健康饮食、合理膳食”核心信�
 refs=''.join(f'<li><span>[{i}]</span><a href="{SOURCES[i][1]}">{t}</a></li>' for i,t in enumerate(short_refs,1))
 p4=f'''
 {title('04','团队协同、验证与持续推进')}{sub('4.1','工程 × 管理 × 设计：六人协作推进')}
-<p>团队 <b>2的10次幂</b> · 数理与统计学院 / 设计学院 / 管理学院 · 指导教师 <b>张会彦副教授</b></p>
+<p>团队 <b>2的10次幂</b> · 数理与统计学院 / 设计学院 / 管理学院 · 指导教师 <b>许雪花讲师</b><span class="consultant-line">顾问：张会彦、沈世勇、孙鼎、刘婧</span></p>
 <div class="team-grid">
 <div><h3>杨哲 <small>负责人 · 开发 / 设计</small></h3><p>系统与 Skill 开发、台账结构、交互联调及统筹。</p></div>
 <div><h3>方子昊 <small>调研 / 分析</small></h3><p>食物条目整理、份量与数值核验、测试分析。</p></div>
