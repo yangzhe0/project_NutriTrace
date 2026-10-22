@@ -1,6 +1,8 @@
-# 食迹 · project_ShiJi
+# 食迹 NutriTrace
 
 **基于个人饮食台账的营养管理智能体**  
+英文名：**NutriTrace** · 仓库：`project_ShiJi`
+
 上海工程技术大学 2026「AI赋能·三旋翼驱动」旋创赛参赛项目 · 团队 **2的10次幂**
 
 [在线体验](https://sa.zheoi.com/) · [在线项目书](https://sa.zheoi.com/docs/proposal.html) · [四页 PDF](docs/proposal.pdf) · [参考文献](docs/references.md)

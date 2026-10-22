@@ -14,7 +14,7 @@ def school():return f'<div class="school"><img class="symbol" src="{asset("asset
 qr=asset('assets/demo-access-qr.png')
 
 p1=f'''
-<div class="cover"><div><div class="eyebrow">2026 旋创赛 · 智能数字大健康 · 创意计划书</div><h1>食迹 <em>ShiJi</em><span> — 基于个人饮食台账的营养管理智能体</span></h1><p class="cover-meta"><span>团队 <b>2的10次幂</b></span><span>负责人 <b>杨哲</b></span><span>指导教师 <b>张会彦</b></span></p></div><a class="demo-entry" href="https://sa.zheoi.com/"><img src="{qr}" alt="食迹在线体验二维码"><b>sa.zheoi.com</b><span>扫一扫或点击网站体验</span></a></div>
+<div class="cover"><div><div class="eyebrow">2026 旋创赛 · 智能数字大健康 · 创意计划书</div><h1>食迹 <em>NutriTrace</em><span> — 基于个人饮食台账的营养管理智能体</span></h1><p class="cover-meta"><span>团队 <b>2的10次幂</b></span><span>负责人 <b>杨哲</b></span><span>指导教师 <b>张会彦</b></span></p></div><a class="demo-entry" href="https://sa.zheoi.com/"><img src="{qr}" alt="食迹在线体验二维码"><b>sa.zheoi.com</b><span>扫一扫或点击网站体验</span></a></div>
 
 {title('01','项目背景与校园需求')}{sub('1.1','从“拍过一餐”到“知道今天怎么吃”')}
 <p>食堂、外卖与便利店是学生的日常就餐场景，但吃了多少、哪些食物很少出现、近期精力与睡眠怎样，往往散落在照片和聊天里。用户需要把连续记录用于具体选择：<strong>今天在预算内加哪一种食物、吃多少、为什么选它？</strong></p>
@@ -23,7 +23,7 @@ p1=f'''
 <table class="scene-table"><thead><tr><th>使用场景</th><th>用户真正想知道</th><th>食迹提供的帮助</th></tr></thead><tbody><tr><td><b>连续外食，搭配重复</b><small>食堂 / 外卖 / 便利店</small></td><td>最近哪些营养来源比较少？</td><td>整理近期餐次与份量，展示摄入来源、记录覆盖情况及值得优先调整的食物类别。</td></tr><tr><td><b>预算有限，要买得具体</b><small>下一餐加购或替换</small></td><td>今天加什么、多少、多少钱？</td><td>按营养目标、预算与忌口比较候选食物，列出份量、预计贡献和替换选项。</td></tr><tr><td><b>饮食改善，仍然不适</b><small>乏力持续或影响日常</small></td><td>还需补充什么、怎样就医？</td><td>追问持续时间与伴随表现，生成就医沟通摘要，提示进一步专业评估。</td></tr></tbody></table>
 {sub('1.3','公共健康与研究依据')}
 <div class="evidence-pair"><div><b>把膳食原则变成日常选择</b><p><strong class="key-source">国家卫生健康委倡导</strong>增加蔬果、全谷物与水产品摄入，建议每天摄入新鲜水果 200—350 克。{cite(1)} 项目将这类原则转为一次可执行的加购或替换。</p></div><div><b>连续反馈具有研究基础</b><p><strong class="key-source">Food4Me 随机试验</strong>显示，基于个人信息的营养反馈有助于改善部分饮食行为。{cite(2)} 这支持服务思路，项目的实际效果仍需本土场景验证。</p></div></div>
-<figure class="food-panel"><img src="{asset("assets/editorial/meal-7111388.jpg")}" alt="米饭、蔬菜与鸡肉搭配示意"><img src="{asset("assets/editorial/meal-24738519.jpg")}" alt="日常鸡肉饭搭配示意"><figcaption>餐食搭配示意 · Piotr Arnoldes / Nadin Sh，Pexels；非用户饮食记录。</figcaption></figure>
+<figure class="food-panel"><img src="{asset("assets/editorial/daily-egg-noodles.jpg")}" class="daily-noodle" alt="煎蛋午餐肉面"><img src="{asset("assets/editorial/daily-ribs-rice.jpg")}" class="daily-rice" alt="排骨杂蔬饭"><figcaption>日常餐食素材：煎蛋午餐肉面 / 排骨杂蔬饭；份量与日期另按演示情境编排。</figcaption></figure>
 '''
 skills=[
 ('餐食解码','meal_profile_skill','照片 / 餐次 / 实际份量','识别候选食材，询问关键份量；将补记和修正写回同一餐次，保留修改历史。','可修正的餐食记录'),
@@ -94,7 +94,7 @@ def subset_fonts():
  sans=os.environ.get('SHIJI_SANS_FONT')
  if not serif or not sans:
   raise SystemExit('Set SHIJI_SERIF_FONT and SHIJI_SANS_FONT to full Noto Serif SC / Noto Sans SC variable font files. Bundled subsets are used when --fonts is omitted.')
- content=''.join([p1,p2,p3,p4])+CSS+json.dumps(cfg,ensure_ascii=False)+'上海工程技术大学2026旋创赛食迹创意计划书智能数字大健康2的10次幂0123456789 / . — ↗'+''.join(chr(i) for i in range(32,127))
+ content=''.join([p1,p2,p3,p4])+CSS+json.dumps(cfg,ensure_ascii=False)+'上海工程技术大学2026旋创赛“AI赋能·三旋翼驱动”食迹创意计划书智能数字大健康2的10次幂0123456789 / . — ↗'+''.join(chr(i) for i in range(32,127))
  text=html.unescape(re.sub('<[^>]+>','',content))
  for src,dst,weight in [(serif,'shiji-serif.woff2',None),(sans,'shiji-sans-regular.woff2',400),(sans,'shiji-sans-medium.woff2',500),(sans,'shiji-sans-bold.woff2',700)]:
   font=TTFont(src)
@@ -118,8 +118,9 @@ def generate(preview=False):
  body=''
  for i,content in enumerate([p1,p2,p3,p4],1):
   content=arrange_sections(content,i)
-  body+=f'<section class="page" id="page-{i}"><div class="masthead">{school()}</div><main>{content}</main><footer><span>创意计划书</span><span><b>{i:02d}</b> / 04</span></footer></section>'
- doc='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>食迹 · 创意计划书 · 2的10次幂</title><style>'+font_css()+CSS+'</style></head><body><div class="toolbar"><span>食迹 · 四页创意计划书</span><button onclick="window.print()">打印 / 保存 PDF</button></div>'+body+'</body></html>'
+  competition='<span class="masthead-competition">“AI赋能·三旋翼驱动”旋创赛</span>' if i>1 else ''
+  body+=f'<section class="page" id="page-{i}"><header class="masthead">{school()}{competition}</header><main>{content}</main><footer><span>创意计划书</span><span><b>{i:02d}</b> / 04</span></footer></section>'
+ doc='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>食迹 NutriTrace · 创意计划书 · 2的10次幂</title><style>'+font_css()+CSS+'</style></head><body><div class="toolbar"><span>食迹 · 四页创意计划书</span><button onclick="window.print()">打印 / 保存 PDF</button></div>'+body+'</body></html>'
  target=ROOT/'tmp/pdfs/layout-preview.html' if preview else ROOT/'docs/proposal.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(doc,encoding='utf-8')
  if not preview:
   from sync_proposal_text import sync

@@ -5,9 +5,16 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const icon=name=>`<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const today=()=>new Date().toLocaleDateString('en-CA');
 const clone=x=>JSON.parse(JSON.stringify(x));
-const seed=()=>({schema:3,records:clone(window.SHIJI_DEMO_SEED),history:[],chat:[]});
+const seed=()=>({schema:3,demoRevision:window.SHIJI_DEMO_REVISION,records:clone(window.SHIJI_DEMO_SEED),history:[],chat:[]});
+function migrateDemoPhotos(saved){
+ const fresh=seed();
+ if(saved.demoRevision===fresh.demoRevision)return {...fresh,...saved};
+ const current=new Map(fresh.records.map(r=>[r.id,r]));
+ const records=saved.records.map(r=>r.origin==='demo'&&Number(r.version||1)<=1&&current.has(r.id)?clone(current.get(r.id)):r);
+ return {...fresh,...saved,records,demoRevision:fresh.demoRevision};
+}
 function initialState(){
- try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&Array.isArray(saved.records))return {...seed(),...saved};}catch{}
+ try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&Array.isArray(saved.records))return migrateDemoPhotos(saved);}catch{}
  const fresh=seed();
  try{
   const old=JSON.parse(localStorage.getItem('food-ledger-prototype-v1'));
@@ -23,6 +30,7 @@ let state=initialState(),busy=false,editingId=null,filter='全部',dateFilter=''
 let memory=[];
 function photoUrl(r){const p=String(r?.photo||'');return /^(\/demo\/meals\/|\/assets\/|data:image\/(jpeg|png|webp);base64,)/.test(p)?p:'';}
 function thumbnail(r){return photoUrl(r).replace('/demo/meals/meal-','/demo/meals/thumb-meal-');}
+function photoStyle(r){const focus=/^\d{1,3}% \d{1,3}%$/.test(r.photoFocus||'')?r.photoFocus:'50% 50%';return `object-position:${focus}`;}
 function toast(text){$('#toast').textContent=text;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,3200);}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast('浏览器存储空间不足，可先导出台账保存。');}render();}
 function inferredTags(r){
@@ -52,7 +60,7 @@ function render(){
  const days=[...new Set(state.records.map(r=>r.date).filter(Boolean))].sort();const week=days.slice(-7);
  $('#dateRange').textContent=window.ShijiHealth?'营养摄入 · 身体自评':week.length?`${Number(week[0].slice(5,7))} 月 ${Number(week[0].slice(8))} 日—${Number(week.at(-1).slice(5,7))} 月 ${Number(week.at(-1).slice(8))} 日`:'从今天开始记录';
  const weekRecords=state.records.filter(r=>week.includes(r.date));$('#weekTotal').textContent=weekRecords.length+' 笔记录';
- $('#recentPhotos').innerHTML=sortedRecords().slice(0,3).map(r=>`<button class="story-card" data-edit="${esc(r.id)}"><div class="story-image">${photoUrl(r)?`<img src="${esc(thumbnail(r))}" alt="${esc(title(r))}" fetchpriority="high">`:icon('book')}<span class="story-label">${esc(label(r))}</span></div><div class="story-caption"><h3>${esc(title(r))}</h3><p>${esc(r.amount||'随时补充食用量')}</p></div></button>`).join('');
+ $('#recentPhotos').innerHTML=sortedRecords().slice(0,3).map(r=>`<button class="story-card" data-edit="${esc(r.id)}"><div class="story-image">${photoUrl(r)?`<img src="${esc(thumbnail(r))}" style="${photoStyle(r)}" alt="${esc(title(r))}" fetchpriority="high">`:icon('book')}<span class="story-label">${esc(label(r))}</span></div><div class="story-caption"><h3>${esc(title(r))}</h3><p>${esc(r.amount||'随时补充食用量')}</p></div></button>`).join('');
  const max=Math.max(3,...week.map(d=>weekRecords.filter(r=>r.date===d).length));
  $('#weekChart').innerHTML=week.map(d=>{const count=weekRecords.filter(r=>r.date===d).length;return `<button class="day-column" data-date="${d}" aria-label="${d}，${count}笔记录"><span class="day-count">${count}</span><span class="day-bar" style="height:${count/max*70}px"></span><span class="day-label">${Number(d.slice(5,7))}/${Number(d.slice(8))}</span></button>`;}).join('');
  $('#foodPattern').innerHTML=['谷薯','蛋白质','蔬菜','奶豆','水果'].map(t=>`<span>${t} <b>${weekRecords.filter(r=>inferredTags(r).includes(t)).length}</b> 餐</span>`).join('');
@@ -64,7 +72,7 @@ function render(){
 function renderLedger(){
  const query=$('#search').value.trim().toLowerCase();
  const records=sortedRecords().filter(r=>(filter==='全部'||r.mealType===filter)&&(dateFilter===''||r.date===dateFilter)&&(!query||[r.foods,r.title,r.note,r.amount].join(' ').toLowerCase().includes(query)));
- $('#ledger').innerHTML=records.map(r=>`<article class="meal-card"><button type="button" data-edit="${esc(r.id)}" aria-label="查看${esc(title(r))}"><div class="meal-image ${photoUrl(r)?'':'no-photo'}">${photoUrl(r)?`<img src="${esc(thumbnail(r))}" alt="${esc(title(r))}" loading="lazy" decoding="async">`:icon('book')}<span class="story-label">${esc(label(r))}</span></div><div class="meal-copy"><h3>${esc(title(r))}</h3><p>${esc(r.foods)}</p><div class="meal-amount">${esc(r.amount||'点击补充食用量')}</div><div class="meal-bottom"><span>${r.origin==='demo'?'饮食故事':r.status==='用户确认'?'已补充':'我的记录'}${r.version>1?' · 已修正':''}</span>${icon('edit')}</div></div></button></article>`).join('');
+ $('#ledger').innerHTML=records.map(r=>`<article class="meal-card"><button type="button" data-edit="${esc(r.id)}" aria-label="查看${esc(title(r))}"><div class="meal-image ${photoUrl(r)?'':'no-photo'}">${photoUrl(r)?`<img src="${esc(thumbnail(r))}" style="${photoStyle(r)}" alt="${esc(title(r))}" loading="lazy" decoding="async">`:icon('book')}<span class="story-label">${esc(label(r))}</span></div><div class="meal-copy"><h3>${esc(title(r))}</h3><p>${esc(r.foods)}</p><div class="meal-amount">${esc(r.amount||'点击补充食用量')}</div><div class="meal-bottom"><span>${r.origin==='demo'?'饮食故事':r.status==='用户确认'?'已补充':'我的记录'}${r.version>1?' · 已修正':''}</span>${icon('edit')}</div></div></button></article>`).join('');
  $('#emptyState').hidden=records.length>0;
  $('#activeDate').innerHTML=dateFilter?`<div class="date-filter">正在查看 ${esc(dateFilter)} <button class="text-button" id="clearDate">显示全部日期 ×</button></div>`:'';
  if($('#clearDate'))$('#clearDate').onclick=()=>{dateFilter='';renderLedger();};

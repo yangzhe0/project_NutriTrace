@@ -1,3 +1,4 @@
+window.SHIJI_DEMO_REVISION="daily-20261022";
 window.SHIJI_DEMO_SEED=[
   {
     "id": "demo-01",
@@ -40,20 +41,19 @@ window.SHIJI_DEMO_SEED=[
     "id": "demo-03",
     "date": "2026-10-15",
     "mealType": "午餐",
-    "title": "毛豆炒面配咖啡",
+    "title": "紫菜香菜汤面",
     "label": "10-15 午餐",
-    "foods": "炒面、毛豆、冰拿铁",
-    "amount": "炒面 1 盒，咖啡 1 杯",
+    "foods": "面条、紫菜、香菜",
+    "amount": "汤面1碗",
     "tags": [
-      "谷薯",
-      "蛋白质",
-      "奶豆"
+      "谷薯"
     ],
-    "note": "工作日的快捷午餐。",
-    "photo": "/demo/meals/meal-03.jpg",
+    "note": "午餐选了一碗汤面。",
+    "photo": "/assets/editorial/daily-noodles.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 61%"
   },
   {
     "id": "demo-04",
@@ -76,21 +76,21 @@ window.SHIJI_DEMO_SEED=[
     "id": "demo-05",
     "date": "2026-10-16",
     "mealType": "午餐",
-    "title": "豆皮拌粉",
+    "title": "煎蛋午餐肉面",
     "label": "10-16 午餐",
-    "foods": "米粉、豆皮、午餐肉、海带、黄瓜",
-    "amount": "拌粉 1 碗，配菜各少量",
+    "foods": "面条、煎蛋、午餐肉、青菜",
+    "amount": "面条1碗，煎蛋1个，午餐肉2片",
     "tags": [
       "谷薯",
       "蛋白质",
-      "蔬菜",
-      "奶豆"
+      "蔬菜"
     ],
-    "note": "拌粉酱料略多。",
-    "photo": "/demo/meals/meal-05.jpg",
+    "note": "一碗带蛋和青菜的面。",
+    "photo": "/assets/editorial/daily-egg-noodles.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 63%"
   },
   {
     "id": "demo-06",
@@ -114,20 +114,20 @@ window.SHIJI_DEMO_SEED=[
     "id": "demo-07",
     "date": "2026-10-17",
     "mealType": "午餐",
-    "title": "饭团与烤肠",
+    "title": "白菜菌菇鸡肉锅",
     "label": "10-17 午餐",
-    "foods": "海苔饭团、烤肠、紫甘蓝、生菜",
-    "amount": "饭团 1 个，烤肠 1 根，配菜少量",
+    "foods": "鸡肉、白菜、金针菇",
+    "amount": "鸡肉1份，白菜和金针菇各1份",
     "tags": [
-      "谷薯",
       "蛋白质",
       "蔬菜"
     ],
-    "note": "赶时间，选了方便带走的一餐。",
-    "photo": "/demo/meals/meal-07.jpg",
+    "note": "一锅家常肉菜搭配。",
+    "photo": "/assets/editorial/daily-chicken-pot.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 55%"
   },
   {
     "id": "demo-08",
@@ -189,19 +189,20 @@ window.SHIJI_DEMO_SEED=[
     "id": "demo-11",
     "date": "2026-10-19",
     "mealType": "早餐",
-    "title": "杂粮饼与豆奶",
+    "title": "丝瓜炒蛋",
     "label": "10-19 早餐",
-    "foods": "杂粮饼、豆奶",
-    "amount": "杂粮饼 1 份，豆奶 1 袋",
+    "foods": "丝瓜、鸡蛋",
+    "amount": "丝瓜炒蛋1盘",
     "tags": [
-      "谷薯",
-      "奶豆"
+      "蛋白质",
+      "蔬菜"
     ],
-    "note": "早餐后没有明显饥饿感。",
-    "photo": "/demo/meals/meal-11.jpg",
+    "note": "一道家常蔬菜配鸡蛋。",
+    "photo": "/assets/editorial/daily-luffa-eggs.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 58%"
   },
   {
     "id": "demo-12",
@@ -227,58 +228,60 @@ window.SHIJI_DEMO_SEED=[
     "id": "demo-13",
     "date": "2026-10-20",
     "mealType": "早餐",
-    "title": "煎蛋牛肉堡",
+    "title": "虾仁滑蛋配西兰花",
     "label": "10-20 早餐",
-    "foods": "面包、牛肉饼、煎蛋、芝士",
-    "amount": "汉堡 1 个",
+    "foods": "虾仁、鸡蛋、西兰花、海苔、牛奶",
+    "amount": "虾仁滑蛋1份，西兰花1份，牛奶1杯",
     "tags": [
-      "谷薯",
       "蛋白质",
+      "蔬菜",
       "奶豆"
     ],
-    "note": "今天早餐比较晚。",
-    "photo": "/demo/meals/meal-13.jpg",
+    "note": "早餐加了一份蔬菜和牛奶。",
+    "photo": "/assets/editorial/daily-shrimp-eggs.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 64%"
   },
   {
     "id": "demo-14",
     "date": "2026-10-20",
     "mealType": "午餐",
-    "title": "卤味双拼饭",
+    "title": "排骨杂蔬饭",
     "label": "10-20 午餐",
-    "foods": "米饭、卤肉、鹌鹑蛋、豆芽",
-    "amount": "米饭 1 碗，卤味 1 份，豆芽 1 份",
+    "foods": "米饭、排骨、青豆、玉米、青菜、香肠",
+    "amount": "米饭1碗，排骨和杂蔬各1份",
     "tags": [
       "谷薯",
       "蛋白质",
       "蔬菜"
     ],
-    "note": "有配菜，想再加一份绿叶菜。",
-    "photo": "/demo/meals/meal-14.jpg",
+    "note": "米饭搭配排骨和杂蔬。",
+    "photo": "/assets/editorial/daily-ribs-rice.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 66%"
   },
   {
     "id": "demo-15",
     "date": "2026-10-20",
     "mealType": "晚餐",
-    "title": "蔬菜煎蛋牛肉堡",
+    "title": "洋葱肉片煎蛋饭",
     "label": "10-20 晚餐",
-    "foods": "面包、牛肉饼、煎蛋、生菜、芝士",
-    "amount": "汉堡 1 个，生菜 2 片",
+    "foods": "米饭、肉片、洋葱、煎蛋",
+    "amount": "米饭1份，肉片1份，煎蛋1个",
     "tags": [
       "谷薯",
       "蛋白质",
-      "蔬菜",
-      "奶豆"
+      "蔬菜"
     ],
-    "note": "吃完刚好，想看看这一周的搭配。",
-    "photo": "/demo/meals/meal-15.jpg",
+    "note": "晚餐吃了肉片和煎蛋饭。",
+    "photo": "/assets/editorial/daily-egg-rice.jpg",
     "status": "演示记录",
     "origin": "demo",
-    "version": 1
+    "version": 1,
+    "photoFocus": "50% 65%"
   }
 ];

@@ -1,7 +1,7 @@
 {
   "date": "2026-10-22",
   "pages": 4,
-  "pdf_sha256": "4057f548ebe3beeaa68b55f0f6d811dc95e6675c18fd321764e14a6ef5bc6d0f",
+  "pdf_sha256": "0334148b0c5776c2a2fa872b8934d9a5e71baebe44b96541de3285555cae2568",
   "layout": [
     {
       "stem": "proposal",
@@ -47,5 +47,8 @@
     "figure_table": 9,
     "caption": 8
   },
-  "browser_comments_20261022": "global print layout revision, two photographs, centered tables, separate workflows, coordinated pathways, heading wings"
+  "browser_comments_20261022": "global print layout revision, two photographs, centered tables, separate workflows, coordinated pathways, heading wings",
+  "photo_revision": "daily-20261022",
+  "photo_checks": "7 user-supplied photographs; CSS crops; 15 unique ledger images; existing unedited demo records migrate; personal and edited records preserved",
+  "header_checks": "Fine divider on all pages; competition name on pages 2-4 only"
 }
