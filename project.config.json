@@ -1,0 +1,34 @@
+{
+  "project_name": "食迹",
+  "team_name": "2的10次幂",
+  "experience_url": "https://sa.zheoi.com/",
+  "document_date": "2026.10.22",
+  "school": "上海工程技术大学",
+  "team_members": [
+    {
+      "name": "杨哲",
+      "role": "开发/设计"
+    },
+    {
+      "name": "邱宇强",
+      "role": "调研/分析"
+    },
+    {
+      "name": "江媛",
+      "role": "设计/展示"
+    },
+    {
+      "name": "张新成",
+      "role": "设计/展示"
+    },
+    {
+      "name": "方子昊",
+      "role": "调研/分析"
+    },
+    {
+      "name": "白璐",
+      "role": "管理/调研"
+    }
+  ],
+  "advisor": "张会彦"
+}

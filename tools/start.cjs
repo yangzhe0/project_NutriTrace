@@ -1,0 +1,11 @@
+const path=require('node:path');
+const fs=require('node:fs');
+const root=path.resolve(__dirname,'..');
+const envFile=path.join(root,'.env');
+if(fs.existsSync(envFile))process.loadEnvFile(envFile);
+const {startServer}=require('../server.cjs');
+const port=Number(process.env.FOODLEDGER_PORT||8765);
+const host=process.env.FOODLEDGER_HOST||'127.0.0.1';
+const server=startServer({root,port,host,defaultEntry:'demo/index.html',publicOrigin:process.env.FOODLEDGER_PUBLIC_ORIGIN||'',getApiConfig:()=>({base:process.env.FOODLEDGER_API_BASE||'http://127.0.0.1:8045',key:process.env.FOODLEDGER_API_KEY||'',model:process.env.FOODLEDGER_MODEL||'gemini-3.8-flash-high'})});
+server.on('listening',()=>console.log(`食迹：http://${host}:${port} / 项目书：/docs/proposal.html`));
+server.on('error',e=>{console.error('启动失败：'+e.code);process.exitCode=1;});

@@ -1,0 +1,14 @@
+{
+  "name": "project-shiji",
+  "version": "0.4.1",
+  "private": true,
+  "description": "食迹：面向外食青年的个人饮食台账、营养计算与身体线索管理演示",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node tools/start.cjs",
+    "test": "node tools/test_health.cjs",
+    "test:ui": "node tools/test_demo.cjs http://127.0.0.1:8765 local",
+    "build:proposal": "python tools/build.py"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

@@ -1,0 +1,31 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+# Dependencies, caches and browser-test output
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+tmp/
+output/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db
+# Personal application materials never belong in this repository
+*.docx
+*.doc
+*报名表*
+*诚信*
+*授权确认书*
+*承诺书*
+*.zip
+*.tar.gz

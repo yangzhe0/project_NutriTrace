@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-22",
+  "pages": 4,
+  "pdf_sha256": "4098c557474b108bb0872bbcc4a8120dfdc3833b44e1d4ea308d6ba2e3243d10",
+  "layout": [
+    {
+      "stem": "proposal",
+      "metrics": [
+        {
+          "page": 1,
+          "gapToFooter": 23,
+          "mainHeight": 909,
+          "horizontalOverflow": []
+        },
+        {
+          "page": 2,
+          "gapToFooter": 30,
+          "mainHeight": 902,
+          "horizontalOverflow": []
+        },
+        {
+          "page": 3,
+          "gapToFooter": 80,
+          "mainHeight": 853,
+          "horizontalOverflow": []
+        },
+        {
+          "page": 4,
+          "gapToFooter": 36,
+          "mainHeight": 897,
+          "horizontalOverflow": []
+        }
+      ]
+    }
+  ],
+  "responsive_widths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "protected_application_materials": "Stored outside this repository; original contents unchanged"
+}
