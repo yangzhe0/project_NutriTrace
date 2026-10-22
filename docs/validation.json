@@ -1,15 +1,15 @@
 {
   "date": "2026-10-22",
   "pages": 4,
-  "pdf_sha256": "e8be32be79fa374e405c0f0d3dfa93c9aafb8c44aaaebea0727dc4582162530c",
+  "pdf_sha256": "ce65d9447ff20609eff872986398b9275fbb90bfb7ab3d401a3ad6fb598b1f82",
   "layout": [
     {
       "stem": "proposal",
       "metrics": [
         {
           "page": 1,
-          "gapToFooter": 45,
-          "mainHeight": 927,
+          "gapToFooter": 21,
+          "mainHeight": 951,
           "horizontalOverflow": []
         },
         {
@@ -51,5 +51,5 @@
   "photo_revision": "daily-20261022",
   "photo_checks": "7 user-supplied photographs; CSS crops; 15 unique ledger images; existing unedited demo records migrate; personal and edited records preserved",
   "header_checks": "Fine divider on all pages; competition name on pages 2-4 only",
-  "cover_photographs": "Two centered 168x132px frames, 20px gap; simplified shared caption; original image bytes preserved"
+  "cover_photographs": "Three 180px square photographs centered independently in equal columns; no caption; 21px gap to footer"
 }
